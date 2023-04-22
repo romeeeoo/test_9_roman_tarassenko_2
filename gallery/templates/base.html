@@ -23,7 +23,7 @@
                             <a class="nav-link" href="{% url "user_detailed" user.pk %}">hi {{ user.username }}</a>
                         </li>
                         <li>
-{#                            <a class="nav-link" href="{% url "logout" %}">LOGOUT</a>#}
+                            <a class="nav-link" href="{% url "logout" %}">LOGOUT</a>
                         </li>
                     {% else %}
                         {% url 'login' as login_url %}
