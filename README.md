@@ -15,3 +15,7 @@
 }
 7. В терминале запустить команду python manage.py migrate, которая создаст в БД необходимые таблицы
 8. Запустить проект командой python manage.py runserver
+9. Загружаем фикстуры 
+>>> ./manage.py loaddata auth.json 
+>>> ./manage.py loaddata dump.json 
+10. Пользователи user1 user2 user3 user4 доспуны под паролем 1234
