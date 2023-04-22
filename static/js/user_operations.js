@@ -66,10 +66,14 @@ $(document).ready(function () {
                 headers: {"X-CSRFToken": csrfToken, "Authorization": 'Token ' + localStorage.getItem('apiToken')},
                 data: {picture_id: $(btnFavourite).attr("id")},
                 success: function (data, status) {
-                    $(btnFavourite).toggleClass("btn-dark")
+                    // $(btnFavourite).toggleClass("btn-dark")
                     console.log(data);
-                    console.log(status);
-                    console.log(4)
+                    if (data.button_status == "like") {
+                        $(btnFavourite).text("like")
+                    }
+                    else {
+                        $(btnFavourite).text("dislike")
+                    }
                 },
                 error: function (response, status) {
                     console.log(status);

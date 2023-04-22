@@ -14,16 +14,16 @@
                 <a href="{% url 'picture_update' picture.pk %}" class="btn btn-primary">update</a>
             {% endif %}
             {% if user.is_authenticated %}
-{#                <form method="POST" class="form_favourite" action="{% url 'toggle_favorite' %}">#}
-{#                    {% csrf_token %}#}
-{#                    {% if picture in user_favorite %}#}
-{#                        <button type="submit" class="btn btn-dark btn_favourite mt-2" id="{{ picture.pk }}">Favourite#}
-{#                        </button>#}
-{#                    {% else %}#}
-{#                        <button type="submit" class="btn btn-outline-dark btn_favourite mt-2" id="{{ picture.pk }}">Favourite#}
-{#                        </button>#}
-{#                    {% endif %}#}
-{#                </form>#}
+                <form method="POST" class="form_favourite" action="{% url 'toggle_favorite' %}">
+                    {% csrf_token %}
+                    {% if picture in user_favorite %}
+                        <button type="submit" class="btn btn-outline-dark btn_favourite mt-2" id="{{ picture.pk }}">dislike
+                        </button>
+                    {% else %}
+                        <button type="submit" class="btn btn-outline-dark btn_favourite mt-2" id="{{ picture.pk }}">like
+                        </button>
+                    {% endif %}
+                </form>
             {% endif %}
         </div>
     </div>
