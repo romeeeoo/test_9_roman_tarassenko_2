@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
     let btnFavouriteList = $(`.btn_favourite`)
+    console.log(btnFavouriteList)
     let deleteCommentBtnList = $(".delete_submit")
     let commentText = $(".comment_text")
     let commentSubmit = $(".comment_submit")

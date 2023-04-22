@@ -17,10 +17,12 @@
                 <form method="POST" class="form_favourite" action="{% url 'toggle_favorite' %}">
                     {% csrf_token %}
                     {% if picture in user_favorite %}
-                        <button type="submit" class="btn btn-outline-dark btn_favourite mt-2" id="{{ picture.pk }}">dislike
+                        <button type="submit" class="btn btn-outline-dark btn_favourite mt-2" id="{{ picture.pk }}">
+                            dislike
                         </button>
                     {% else %}
-                        <button type="submit" class="btn btn-outline-dark btn_favourite mt-2" id="{{ picture.pk }}">like
+                        <button type="submit" class="btn btn-outline-dark btn_favourite mt-2" id="{{ picture.pk }}">
+                            like
                         </button>
                     {% endif %}
                 </form>

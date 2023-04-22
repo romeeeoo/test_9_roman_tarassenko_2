@@ -11,5 +11,6 @@ class UserDetailView(DetailView):
         context = super().get_context_data()
         favorite_pictures = self.object.favorite_pictures.all()
         context["pictures"] = favorite_pictures
+        context["user_favorite"] = self.request.user.favorite_pictures.all()
         return context
 
