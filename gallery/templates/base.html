@@ -12,12 +12,12 @@
 {% block menu %}
     <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
         <div class="container-fluid">
-{#            <a class="navbar-brand" href="{% url "index" %}">Gallery</a>#}
+            <a class="navbar-brand" href="{% url "index" %}">Gallery</a>
             <div class="" id="navbarNav">
                 <ul class="navbar-nav">
                     {% if user.is_authenticated %}
                         <li class="nav-item">
-{#                            <a class="nav-link" href="{% url "picture_add" %}">Add</a>#}
+                            <a class="nav-link" href="{% url "picture_add" %}">Add</a>
                         </li>
                         <li class="nav-item">
 {#                            <a class="nav-link" href="{% url "user_detailed" user.pk %}">hi {{ user.username }}</a>#}
@@ -30,17 +30,17 @@
                         {% url 'register' as register_url %}
                         {%  if login_url in request.get_full_path or register_url in request.get_full_path %}
                             <li>
-{#                                <a class="nav-link" href="{% url "login" %}">LOGIN</a>#}
+                                <a class="nav-link" href="{% url "login" %}">LOGIN</a>
                             </li>
                             <li>
-{#                                <a class="nav-link" href="{% url "register" %}">REGISTER</a>#}
+                                <a class="nav-link" href="{% url "register" %}">REGISTER</a>
                             </li>
                         {% else %}
                             <li>
-{#                                <a class="nav-link" href="{% url "login" %}?next={{ request.get_full_path }}">LOGIN</a>#}
+                                <a class="nav-link" href="{% url "login" %}?next={{ request.get_full_path }}">LOGIN</a>
                             </li>
                             <li>
-{#                                <a class="nav-link" href="{% url "register" %}?next={{ request.get_full_path }}">REGISTER</a>#}
+                                <a class="nav-link" href="{% url "register" %}?next={{ request.get_full_path }}">REGISTER</a>
                             </li>
                         {% endif %}
                     {% endif %}

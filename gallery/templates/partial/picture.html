@@ -1,14 +1,14 @@
 <div class="col-md-6 col-sm-12 col-lg-3">
-{#    <div class="card" data-pictureId="{{ picture.pk }}">#}
+    <div class="card" data-pictureId="{{ picture.pk }}">
         <div class="container col-10 mt-5 mb-5">
-{#            {% if picture.image %}#}
-{#                <img class="card-img-top picture-image" src="{{ picture.image.url }}" alt="{{ picture }}">#}
-{#            {% endif %}#}
+            {% if picture.image %}
+                <img class="card-img-top picture-image" src="{{ picture.image.url }}" alt="{{ picture.pk }}">
+            {% endif %}
         </div>
         <div class="card-body mt-5">
-{#            <p class="card-picture-description">About: {{ picture.description }}</p>#}
-{#            <p class="card-picture-description">Author: {{ picture.author }}</p>#}
-{#            <p class="card-picture-description">Created at: {{ picture.created_at }}</p>#}
+            <p class="card-picture-description">About: {{ picture.description }}</p>
+            <p class="card-picture-description">Author: {{ picture.author }}</p>
+            <p class="card-picture-description">Created at: {{ picture.created_at }}</p>
 {#            <a href="{% url 'detailed' picture.pk %}" class="btn btn-primary url-detailed">view</a>#}
 {#            {% if perms.gallery.change_picture or picture.author == request.user %}#}
 {#                <a href="{% url 'picture_update' picture.pk %}" class="btn btn-primary">update</a>#}
