@@ -22,13 +22,12 @@ class LoginView(TemplateView, SuccessUrlMixin):
         user_data = json.loads(request.body)
         form = self.form_class(user_data)
         if not form.is_valid():
-            print("log-invalid")
-            return redirect("login")
+            return self.render_to_response(form)
         username = form.cleaned_data.get("username")
         password = form.cleaned_data.get("password")
         user = authenticate(request, username=username, password=password)
         if not user:
-            return redirect("login")
+            return JsonResponse({"error": "incorrect password or username"})
         login(request, user)
         success_url = self.get_success_url()
         return JsonResponse({"success_url": success_url})

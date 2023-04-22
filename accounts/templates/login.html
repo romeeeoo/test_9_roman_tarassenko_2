@@ -2,10 +2,14 @@
 {% load django_bootstrap5 %}
 
 {% block content %}
-    <form action="" method="POST">
-    {% csrf_token %}
-    {% bootstrap_form form %}
-    {% bootstrap_button button_type="submit" content="login" id="id_submit" %}
+    <div class="row">
+    <p id="auth-errors" class="col">
+    </p>
+    </div>
+    <form action="{% url "login" %}" method="POST" id="id_form">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        {% bootstrap_button button_type="submit" content="login" id="id_submit" %}
     </form>
     <input type="hidden" value="{% url "api_token_auth" %}" id="api_auth_url">
 {% endblock %}

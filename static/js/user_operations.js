@@ -21,9 +21,6 @@ $(document).ready(function () {
         let username = $('#id_username').val();
         let password = $('#id_password').val();
         let password_confirm = $('#id_password_confirm').val();
-        console.log(password);
-        console.log(password_confirm);
-        console.log(username);
         $.ajax({
             url: $('#id_form').attr('action'),
             method: "POST",
@@ -42,12 +39,15 @@ $(document).ready(function () {
 
                         },
                         error: function (apiAuthResponse, apiAuthStatus) {
+
                             console.log(apiAuthResponse);
                             console.log(apiAuthStatus);
                         },
                     }
                 );
-            },
+                $('#auth-errors').text(response.error);
+                console.log(response.error);
+                },
             error: function (response, status) {
                 console.log(status);
                 console.log(response);
