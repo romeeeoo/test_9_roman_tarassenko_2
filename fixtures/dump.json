@@ -1,0 +1,133 @@
+[
+{
+  "model": "gallery.picture",
+  "pk": 2,
+  "fields": {
+    "image": "all_pictures/Консилер-камуфляж_ART-VISAGE_ULTRA_COVER.PNG",
+    "author": 1,
+    "description": "2345",
+    "created_at": "2023-04-22T07:08:15.930Z",
+    "favored_by": []
+  }
+},
+{
+  "model": "gallery.picture",
+  "pk": 4,
+  "fields": {
+    "image": "all_pictures/1_бу.PNG",
+    "author": 1,
+    "description": "1",
+    "created_at": "2023-04-22T07:35:49.131Z",
+    "favored_by": [
+      2
+    ]
+  }
+},
+{
+  "model": "gallery.picture",
+  "pk": 5,
+  "fields": {
+    "image": "all_pictures/7_бу.png",
+    "author": 1,
+    "description": "2",
+    "created_at": "2023-04-22T07:35:56.288Z",
+    "favored_by": []
+  }
+},
+{
+  "model": "gallery.picture",
+  "pk": 6,
+  "fields": {
+    "image": "all_pictures/9_бу.png",
+    "author": 1,
+    "description": "sefsefse",
+    "created_at": "2023-04-22T07:36:04.057Z",
+    "favored_by": [
+      1,
+      2,
+      4
+    ]
+  }
+},
+{
+  "model": "gallery.picture",
+  "pk": 7,
+  "fields": {
+    "image": "all_pictures/1L6A0280_8AEt74b.JPG",
+    "author": 1,
+    "description": "4",
+    "created_at": "2023-04-22T07:36:24.882Z",
+    "favored_by": [
+      1,
+      2,
+      4
+    ]
+  }
+},
+{
+  "model": "gallery.picture",
+  "pk": 8,
+  "fields": {
+    "image": "all_pictures/1_бу_c3qrpx3.PNG",
+    "author": 2,
+    "description": "i am user2 owner",
+    "created_at": "2023-04-22T08:45:12.623Z",
+    "favored_by": [
+      3,
+      1,
+      2,
+      4
+    ]
+  }
+},
+{
+  "model": "gallery.comment",
+  "pk": 1,
+  "fields": {
+    "text": "new comment",
+    "picture": 8,
+    "author": 2,
+    "datetime_created": "2023-04-22T09:36:52.740Z"
+  }
+},
+{
+  "model": "gallery.comment",
+  "pk": 3,
+  "fields": {
+    "text": "dddd",
+    "picture": 8,
+    "author": 2,
+    "datetime_created": "2023-04-22T09:38:35.772Z"
+  }
+},
+{
+  "model": "gallery.comment",
+  "pk": 6,
+  "fields": {
+    "text": "rtyui",
+    "picture": 8,
+    "author": 1,
+    "datetime_created": "2023-04-22T09:48:15.203Z"
+  }
+},
+{
+  "model": "gallery.comment",
+  "pk": 7,
+  "fields": {
+    "text": ",,,",
+    "picture": 8,
+    "author": 3,
+    "datetime_created": "2023-04-22T09:48:51.256Z"
+  }
+},
+{
+  "model": "gallery.comment",
+  "pk": 9,
+  "fields": {
+    "text": "kjhjk",
+    "picture": 6,
+    "author": 4,
+    "datetime_created": "2023-04-22T10:38:40.632Z"
+  }
+}
+]
