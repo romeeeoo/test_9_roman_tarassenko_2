@@ -11,7 +11,7 @@
             <p class="card-picture-description">Created at: {{ picture.created_at }}</p>
             <a hidden href="{% url 'detailed' picture.pk %}" class="btn btn-primary url-detailed"></a>
             {% if perms.gallery.change_picture or picture.author == request.user %}
-{#                <a href="{% url 'picture_update' picture.pk %}" class="btn btn-primary mb-2">update</a>#}
+                <a href="{% url 'picture_update' picture.pk %}" class="btn btn-primary mb-2">update</a>
             {% endif %}
             {% if user.is_authenticated %}
 {#                <form method="POST" class="form_favourite" action="{% url 'toggle_favorite' %}">#}

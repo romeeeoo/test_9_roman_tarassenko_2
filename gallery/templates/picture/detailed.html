@@ -9,7 +9,7 @@
         <h3 class="mt-5">Favored By:</h3>
         {% for account in picture_favoured_by %}
             <p class="mt-4">
-{#                <a href="{% url "user_detailed" account.pk %}"> {{ account.get_full_name|default:account.username }}</a>#}
+                <a href="{% url "user_detailed" account.pk %}"> {{ account.get_full_name|default:account.username }}</a>
             </p>
         {% endfor %}
         <h3 class="pt-2 pb-2">Comments:</h3>
