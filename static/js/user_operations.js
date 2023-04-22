@@ -1,7 +1,6 @@
 $(document).ready(function () {
 
     let btnFavouriteList = $(`.btn_favourite`)
-    console.log(btnFavouriteList)
     let deleteCommentBtnList = $(".delete_submit")
     let commentText = $(".comment_text")
     let commentSubmit = $(".comment_submit")
@@ -67,7 +66,6 @@ $(document).ready(function () {
                 headers: {"X-CSRFToken": csrfToken, "Authorization": 'Token ' + localStorage.getItem('apiToken')},
                 data: {picture_id: $(btnFavourite).attr("id")},
                 success: function (data, status) {
-                    // $(btnFavourite).toggleClass("btn-dark")
                     console.log(data);
                     if (data.button_status == "like") {
                         $(btnFavourite).text("like")
@@ -151,7 +149,6 @@ $(document).ready(function () {
                     "X-CSRFToken": csrfToken,
                     "Authorization": 'Token ' + localStorage.getItem('apiToken')
                 },
-                // data: {"comment_id": commentId},
                 success: function (data, status) {
                     $(`#commentCard-${commentId}`).remove()
                     console.log(data);
