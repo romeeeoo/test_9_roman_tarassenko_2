@@ -4,7 +4,7 @@
     {% block content %}
         {% include "partial/detailed_picture_card.html" %}
         {% if perms.gallery.delete_picture or picture.author == request.user %}
-{#            <a href="{% url "picture_delete" picture.pk %}" class="btn btn-primary mt-3" role="button">Delete?</a>#}
+            <a href="{% url "picture_delete" picture.pk %}" class="btn btn-danger mt-3" role="button">Delete?</a>
         {% endif %}
         <h3 class="mt-5">Favored By:</h3>
         {% for account in picture_favoured_by %}
